@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="ro"> 
 <head>
-    <meta charset="UTF-8">
-    <title>Retry</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandName</title>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <h1>Bun venit pe pagina mea!</h1>
+    <p>Aceasta este continutul paginii, <br/>scris in format paragraf.</p>
+    <form id="formular">
+        <label for="nume">Numele tau:</label>
+        <input type="text" id="nume" name="nume">
+    <br/>
+        <label for="email">Adresa de email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" value="Trimite">
+
+    <script>
+        document.getElementById('formular').addEventListener('submit',function(event))  
+        event.preventDefault(); //Previne trimiterea formularului
+        var nume = document.querySelector('input[name="nume"]').value;
+        console.log('Nume:', nume)
+        console.log('Email:', email)
+    </script>
 </body>
 </html>
